@@ -48,7 +48,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(421, 323);
+        MainWindow->resize(800, 600);
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName("actionNew");
         QIcon icon;
@@ -56,8 +56,14 @@ public:
         actionNew->setIcon(icon);
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName("actionOpen");
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/icons/Open.bmp"), QSize(), QIcon::Normal, QIcon::Off);
+        actionOpen->setIcon(icon1);
         actionSave_as = new QAction(MainWindow);
         actionSave_as->setObjectName("actionSave_as");
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/icons/Save.bmp"), QSize(), QIcon::Normal, QIcon::Off);
+        actionSave_as->setIcon(icon2);
         actionPrint = new QAction(MainWindow);
         actionPrint->setObjectName("actionPrint");
         actionExit = new QAction(MainWindow);
@@ -76,7 +82,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(0, 20, 421, 271));
+        verticalLayoutWidget->setGeometry(QRect(0, 0, 421, 291));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -88,7 +94,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 421, 22));
+        menubar->setGeometry(QRect(0, 0, 800, 22));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName("menuFile");
         menuEdit = new QMenu(menubar);
